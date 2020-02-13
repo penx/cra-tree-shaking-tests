@@ -2,6 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const SomeUnusedComponent = () => <div>
+  Some unique string
+</div>
+
 function App() {
   return (
     <div className="App">
@@ -22,5 +26,7 @@ function App() {
     </div>
   );
 }
+
+App.SomeUnusedComponent = SomeUnusedComponent;
 
 export default App;
