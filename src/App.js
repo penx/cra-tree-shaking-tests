@@ -2,6 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const LazyPageAsync = React.lazy(() =>
+	import('./LazyPage').then(module => ({ default: module.LazyPage })),
+);
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +22,7 @@ function App() {
         >
           Learn React
         </a>
+        <LazyPageAsync />
       </header>
     </div>
   );
